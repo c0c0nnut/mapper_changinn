@@ -1,0 +1,7 @@
+configfile: "config.yaml"
+include: "mapping.smk"
+include: "call.smk"
+rule all:
+    input:
+       expand(rules.create_pileup_call.output, sample=['SRR19328436_part'])
+
